@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!------------------------- Head ---------------------------->
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<!------------------------- Body --------------------------->
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div><h1>The Onliest Road<h1></div>
+        <div>
+            <ul>
+                <li><a href="./travel_recommendation.html" id="home"> Home </a></li>
+                <li><a href="./about.html" id="about"> About Us </a></li>
+                <li><a href="./contact.html" id="contact"> Contact Us </a></li>   
+            </ul>
+        </div>
+        <div style="visibility: hidden">
+            <input type="text" id="destinationInput" placeholder="Enter a destination"><button id="searchBtn">Search</button><button id="resetBtn">Reset</button>
+        </div>
+    </nav>
+
+
+    <!-- Main -->
+    <div class="container">
+
+        <!-- Contact -->
+        <div class="column">
+            <div>
+                <h2>CONTACT US</h2>
+                <p>Beefcake!</p>
+            </div>
+        </div>
+
+        <!-- Form -->
+        <div class="column" id="form">
+            <div>
+                <label for="name">Name:</label>
+                <br>
+                <input type="text" id="name" name="name" size="50">
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <br>
+                <input type="text" id="email" name="email" size="50">
+            </div>
+            <div>
+                <label for="msgInput">Message:</label>
+                <br>
+                <textarea id="msgInput" name="msgInput" rows="10" cols="50"></textarea>
+            </div>
+            <div>
+                <button id="submit">Submit</button>
+        </div>
+    </div>
+</body>
+</html>
