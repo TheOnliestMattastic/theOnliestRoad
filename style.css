@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
 }
 
 .navbar {
@@ -20,7 +22,6 @@ nav ul {
 nav a {
     text-decoration: none;
     font-size: large;
-    font-weight: bold;
     color: whitesmoke;
     padding-left: 15px;
     padding-right: 15px;
@@ -28,19 +29,13 @@ nav a {
 
 
 .container {
-    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-.grid {
-    display: grid;
-}
-
 .card {
-    justify-content: center;
     background-color: rgba(0, 0, 0, .5);
     border: 1px solid #06704C;
     padding: 15px;
@@ -70,9 +65,6 @@ body h2 {
     font-size: 64px;
 }
 
-body h3 {
-}
-
 body p {
     font-size: 24px;
 }
@@ -100,4 +92,8 @@ body ul {
 
 #lsTeam {
     align-self: flex-start;
+}
+
+#grid {
+    display: inline-grid;
 }
