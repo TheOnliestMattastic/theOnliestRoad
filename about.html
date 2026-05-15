@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!----------------------------------- Head ---------------------------->
+<!----------------------------------- Head ----------------------------------->
 <head>
     <meta charset="UTF-8">
     <title>About Us</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 
-<!-------------------------------- Body --------------------------->
+<!----------------------------------- Body ----------------------------------->
 <body>
-
     <!-- Navbar -->
     <nav class="navbar">
         <div><h1>The Onliest Road<h1></div>
@@ -22,53 +21,54 @@
             </ul>
         </div>
         <div style="visibility: hidden">
-            <input type="text" id="destinationInput" placeholder="Enter a destination"><button id="Search">Search</button><button id="Reset">Reset</button>
+            <input type="text" id="input" placeholder="Enter a destination">
+            <button id="search">Search</button>
+            <button id="reset">Reset</button>
         </div>
     </nav>
 
     <!-------------------------- Main ------------------------------->
-    <div class="cards">
-
+    <div class="container" id="aboutUs">
         <!-- About -->
-        <div class="card">
-            <div><h2>ABOUT US</h2></div>
-            <div><p>
+        <div class="card" id="msgAbout">
+            <h2>ABOUT US</h2>
+            <p>
                 Most travel agencies are total scams ran by hippies who want to sell you "experiences" and "spiritual growth."
                 Lame! At THE ONLIEST ROAD, we don't care about your feelings; we care about you besting your friends on social media.
                 So stop being poor and give us your money so you can pretend to be happy.
-            </p></div>
+            </p>
         </div>
 
         <!-- Team -->
-        <div class="card">
-            <div><h2>The "A" Team</h2></div>
-            <div><ul>
+        <div class="card" id="lsTeam">
+            <h2>The A Team</h2>
+            <ul>
                 <li>
                     <img src="assets/eric-cartman.png" alt="eric-cartman" height="100" width="200">
                     <h3>Eric Cartman</h3>
-                    Founder & Supreme Leader
+                    <p>Founder</p>
                 </li>
                 <li>
                     <img src="assets/stan-marsh.png" alt="stan-marsh" height="100" width="200">
                     <h3>Stan Marsh</h3>
-                    Chief Logistics Officer
+                    <p>Chief Logistics Officer</p>
                 </li>
                 <li>
                     <img src="assets/kyle-broflovski.png" alt="kyle-broflovski" height="100" width="200">
                     <h3>Kyle Broflovski</h3>
-                    Director of Finance
+                    <p>Director of Finance</p>
                 </li>
                 <li>
                     <img src="assets/kenny-mccormick.png" alt="kenny-mccormick" height="100" width="200">
                     <h3>Kenny McCormick</h3>
-                    Safety Inspector
+                    <p>Safety Inspector</p>
                 </li>
                 <li>
                     <img src="assets/butters-stotch.png" alt="butters-stotch" height="100" width="200">
                     <h3>Butters Stotch</h3>
-                    Head of Customer Service
+                    <p>Head of Customer Service</p>
                 </li>
-            </ul></div>
+            </ul>
         </div>
     </div>
 </body>

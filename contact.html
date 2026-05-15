@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!------------------------------- Head ---------------------------------->
+<!----------------------------------- Head ----------------------------------->
 <head>
     <meta charset="UTF-8">
     <title>Contact Us</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 
-<!----------------------------------- Body ----------------------------->
+<!----------------------------------- Body ----------------------------------->
 <body>
-
     <!-- Navbar -->
     <nav class="navbar">
         <div><h1>The Onliest Road<h1></div>
@@ -22,14 +21,14 @@
             </ul>
         </div>
         <div style="visibility: hidden">
-            <input type="text" id="destinationInput" placeholder="Enter a destination"><button id="searchBtn">Search</button><button id="resetBtn">Reset</button>
+            <input type="text" id="input" placeholder="Enter a destination">
+            <button id="search">Search</button>
+            <button id="reset">Reset</button>
         </div>
     </nav>
 
-
     <!------------------------------ Main ---------------------------------->
-    <div class="columns">
-
+    <div class="container">
         <!-- Contact -->
         <div class="column" id="contact">
             <div>
@@ -41,22 +40,20 @@
         <!-- Form -->
         <div class="column" id="form">
             <div>
-                <label for="name">Name:</label>
-                <br>
+                <label for="name">Name:</label><br>
                 <input type="text" id="name" name="name" size="50">
             </div>
             <div>
-                <label for="email">Email:</label>
-                <br>
+                <label for="email">Email:</label><br>
                 <input type="text" id="email" name="email" size="50">
             </div>
             <div>
-                <label for="msgInput">Message:</label>
-                <br>
+                <label for="msgInput">Message:</label><br>
                 <textarea id="msgInput" name="msgInput" rows="10" cols="50"></textarea>
             </div>
             <div>
                 <button id="submit">Submit</button>
+            </div>
         </div>
     </div>
 </body>

@@ -26,49 +26,20 @@ nav a {
     padding-right: 15px;
 }
 
-body {
-    background-image: url('assets/busstop.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100%;
-}
 
-body div {
-    margin: 15px;
-}
-
-body h2 {
-    font-size: 56px;
-    font-weight: bolder;
-}
-
-body p {
-    font-size: 24px;
-}
-
-body ul {
-    list-style-type: none;
+.container {
+    font-family: Arial, sans-serif;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-body ul li {
-    padding: 5px;
-    text-align: center;
-}
-
-.cards {
-    display: flex;
-    flex-direction: column;
-}
-
-.columns {
-    display: flex;
+.grid {
+    display: grid;
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     background-color: rgba(0, 0, 0, .5);
     border: 1px solid #06704C;
@@ -76,7 +47,6 @@ body ul li {
     color: whitesmoke;
     font-weight: bolder;
 }
-
 
 .column {
     display: flex;
@@ -90,12 +60,44 @@ body ul li {
     font-weight: bolder;
 }
 
-
-#msgWelcome {
-    margin-top: 10%;
-    align-self: flex-start;
+body {
+    background-image: url('assets/busstop.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-#contact > div {
-    align-self: center;
+body h2 {
+    font-size: 64px;
+}
+
+body h3 {
+}
+
+body p {
+    font-size: 24px;
+}
+
+body li p {
+    font-size: 16px;
+}
+
+body div {
+    margin: 15px;
+}
+
+body ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 5px;
+}
+
+#aboutUs {
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#lsTeam {
+    align-self: flex-start;
 }
