@@ -8,26 +8,34 @@ function search() {
     .then(response => response.json())
     .then(data => {
         const dest = document.getElementById("input").value.toLowerCase().trim();
-        const rec = document.createElement("div");
-        
+        const grid = document.getElementById("grid");
+        const card = document.createElement("div");
+
         switch (true) {
             case dest.includes("beach"):
                 msgW.hidden = true;
+
+                const beaches = data.beaches
+                for (const beach of beaches) {
+                    card.classList.add("card");
+                    card.innerHTML += `<img src="${beaches.imageUrl}">`;
+                    card.innerHTML += `<h3>${beaches.name}</h3>`;
+                    card.innerHTML += `<p>${beaches.description}</p>`;
+                    grid.appendChild(card);
+                };
                 break;
             
             case dest.includes("temple"):
-                console.log("temples");
                 msgW.hidden = true;
                 break;
 
             case dest.includes("countr"):
-                console.log("countries");
                 msgW.hidden = true;
                 break;
             
             default:
                 msgW.hidden = true;
-            }
+        }
     })
 }
 
