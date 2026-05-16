@@ -1,7 +1,6 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: Arial, sans-serif;
     font-weight: bold;
 }
@@ -27,12 +26,10 @@ nav a {
     padding-right: 15px;
 }
 
-
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 .card {
@@ -40,7 +37,6 @@ nav a {
     border: 1px solid #06704C;
     padding: 15px;
     color: whitesmoke;
-    font-weight: bolder;
 }
 
 .column {
@@ -52,7 +48,6 @@ nav a {
     border: 1px solid #06704C;
     padding: 15px;
     color: whitesmoke;
-    font-weight: bolder;
 }
 
 body {
@@ -92,8 +87,4 @@ body ul {
 
 #lsTeam {
     align-self: flex-start;
-}
-
-#grid {
-    display: inline-grid;
 }
