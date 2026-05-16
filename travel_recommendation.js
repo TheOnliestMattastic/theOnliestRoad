@@ -7,61 +7,70 @@ const grid = document.getElementById("grid");
 function search() {
     const dest = document.getElementById("input").value.toLowerCase().trim();
     grid.innerHTML = "";
+
+    if (!dest) {
+        alert("Please enter a destination.");
+        return;
+    }
     
     fetch("travel_recommendation_api.json")
-    .then(response => response.json())
-    .then(data => {
-        switch (true) {
-            case dest.includes("beach"):
-                const beaches = data.beaches
-                msgW.hidden = true;
-                grid.hidden = false;
-                for (const beach of beaches) {
-                    const card = document.createElement("div");
-                    card.classList.add("card");
-                    card.innerHTML += `<img src="${beach.imageUrl}">`;
-                    card.innerHTML += `<h3>${beach.name}</h3>`;
-                    card.innerHTML += `<p>${beach.description}</p>`;
-                    grid.appendChild(card);
-                };
-                break;
-            
-            case dest.includes("temple"):
-                const temples = data.temples
-                msgW.hidden = true;
-                grid.hidden = false;
-                for (const temple of temples) {
-                    const card = document.createElement("div");
-                    card.classList.add("card");
-                    card.innerHTML += `<img src="${temple.imageUrl}">`;
-                    card.innerHTML += `<h3>${temple.name}</h3>`;
-                    card.innerHTML += `<p>${temple.description}</p>`;
-                    grid.appendChild(card);
-                };
-                break;
+        .then(response => {
+            if (!response.ok) throw new Error("Failed to load data");
+            return response.json();
+        })
 
-            case dest.includes("countr"):
-                const countries = data.countries
-                msgW.hidden = true;
-                grid.hidden = false;
-                for (const country of countries) {
-                    const cities = country.cities;
-                    for (const city of cities) {
+        .then(data => {
+            switch (true) {
+                case dest.includes("beach"):
+                    const beaches = data.beaches
+                    msgW.hidden = true;
+                    grid.hidden = false;
+                    for (const beach of beaches) {
                         const card = document.createElement("div");
                         card.classList.add("card");
-                        card.innerHTML += `<img src="${city.imageUrl}">`;
-                        card.innerHTML += `<h3>${city.name}</h3>`;
-                        card.innerHTML += `<p>${city.description}</p>`;
+                        card.innerHTML += `<img src="${beach.imageUrl}">`;
+                        card.innerHTML += `<h3>${beach.name}</h3>`;
+                        card.innerHTML += `<p>${beach.description}</p>`;
                         grid.appendChild(card);
-                    }
-                };
-                break;
-            
-            default:
-                msgW.hidden = true;
-                grid.hidden = true;
-        }
-    })
+                    };
+                    break;
+                
+                case dest.includes("temple"):
+                    const temples = data.temples
+                    msgW.hidden = true;
+                    grid.hidden = false;
+                    for (const temple of temples) {
+                        const card = document.createElement("div");
+                        card.classList.add("card");
+                        card.innerHTML += `<img src="${temple.imageUrl}">`;
+                        card.innerHTML += `<h3>${temple.name}</h3>`;
+                        card.innerHTML += `<p>${temple.description}</p>`;
+                        grid.appendChild(card);
+                    };
+                    break;
+
+                case dest.includes("countr"):
+                    const countries = data.countries
+                    msgW.hidden = true;
+                    grid.hidden = false;
+                    for (const country of countries) {
+                        const cities = country.cities;
+                        for (const city of cities) {
+                            const card = document.createElement("div");
+                            card.classList.add("card");
+                            card.innerHTML += `<img src="${city.imageUrl}">`;
+                            card.innerHTML += `<h3>${city.name}</h3>`;
+                            card.innerHTML += `<p>${city.description}</p>`;
+                            grid.appendChild(card);
+                        }
+                    };
+                    break;
+                
+                default:
+                    msgW.hidden = true;
+                    grid.hidden = true;
+            }
+        })
 }
 
 // ================================== Reset ===================================
