@@ -1,36 +1,41 @@
 const btnSearch = document.getElementById("search");
 const btnReset = document.getElementById("reset");
+const msgW = document.getElementById("msgWelcome");
 
-// Search =====================================================================
+// ================================= Search ===================================
 function search() {
-    const input = document.getElementById("input").value.toLowerCase().trim();
-
     fetch("travel_recommendation_api.json")
     .then(response => response.json())
     .then(data => {
-        let dest = input.toLowerCase();
-
+        const dest = document.getElementById("input").value.toLowerCase().trim();
+        const rec = document.createElement("div");
+        
         switch (true) {
             case dest.includes("beach"):
-                console.log("beaches");
+                msgW.hidden = true;
                 break;
             
             case dest.includes("temple"):
                 console.log("temples");
+                msgW.hidden = true;
                 break;
 
             case dest.includes("countr"):
                 console.log("countries");
+                msgW.hidden = true;
                 break;
             
             default:
-                console.log("nope");
-        }
+                msgW.hidden = true;
+            }
     })
 }
 
-// Reset ======================================================================
-function reset() {document.getElementById("input").value = "";}
+// ================================== Reset ===================================
+function reset() {
+    document.getElementById("input").value = "";
+    msgW.hidden = false;
+}
 
 btnSearch.addEventListener("click", search);
 btnReset.addEventListener("click", reset);
